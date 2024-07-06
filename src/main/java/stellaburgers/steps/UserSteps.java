@@ -29,7 +29,7 @@ public class UserSteps {
     @Step("Удаление юзера")
     public ValidatableResponse deleteUser(User user) {
         return given()
-                .pathParam("accessToken", user.getAccessToken())
+                .header("accessToken", user.getAccessToken())
                 .when()
                 .delete(Endpoints.DELETE_USER)
                 .then();
