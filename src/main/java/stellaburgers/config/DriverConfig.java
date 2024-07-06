@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverConfig {
 
-    protected String stellarburgersUrl = "https://stellarburgers.nomoreparties.site";
+    public static final String STELLA_BURGERS_URL = "https://stellarburgers.nomoreparties.site";
 
     private static WebDriver driver;
 
@@ -40,7 +40,7 @@ public class DriverConfig {
     }
 
     public void navigateToUrl() {
-        driver.get(stellarburgersUrl);
+        driver.get(DriverConfig.STELLA_BURGERS_URL);
     }
 
     public void quitDriver() {
